@@ -10,4 +10,7 @@ ADD . .
 
 RUN pip --no-cache-dir install --upgrade pip && pip --no-cache-dir install .[api,cloud]
 
+# 添加EXPOSE命令来指定容器内部要监听的端口
+EXPOSE 3000
+
 ENTRYPOINT ["bin/startup.sh"]
